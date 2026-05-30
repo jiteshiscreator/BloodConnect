@@ -23,6 +23,8 @@ import notificationRoutes from './routes/notification.routes.js';
 const app = express();
 const httpServer = http.createServer(app);
 
+app.set('trust proxy', 1);
+
 // ── Socket.IO ──
 initSocket(httpServer);
 
