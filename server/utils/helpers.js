@@ -18,7 +18,7 @@ export const generateRefreshToken = (payload) =>
 /** Cookie options shared between access and refresh tokens */
 const baseCookieOptions = {
   httpOnly: true,
-  secure: process.env.NODE_ENV === 'production',
+  secure: process.env.COOKIE_SECURE === 'true',
   sameSite: 'lax',
 };
 
