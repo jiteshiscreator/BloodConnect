@@ -20,7 +20,7 @@ export const protect = async (req, res, next) => {
     // Try verifying access token first
     if (accessToken) {
       try {
-        decoded = jwt.verify(accessToken, process.env.JWT_SECRET);
+        decoded = jwt.verify(accessToken, process.env.JWT_ACCESS_SECRET);
       } catch (err) {
         // Access token expired — fall through to refresh
         if (err.name !== 'TokenExpiredError') {

@@ -9,7 +9,7 @@ export const DONATION_COOLDOWN_DAYS = 56;
 
 /** Generate signed JWT access token (15 minutes) */
 export const generateAccessToken = (payload) =>
-  jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '15m' });
+  jwt.sign(payload, process.env.JWT_ACCESS_SECRET, { expiresIn: '15m' });
 
 /** Generate signed JWT refresh token (7 days) */
 export const generateRefreshToken = (payload) =>
